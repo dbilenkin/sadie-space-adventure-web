@@ -258,6 +258,14 @@ function draw() {
 }
 
 // GAME CONTROLS
+function continueGame() {
+  if (gameStarted) return;
+
+  gameStarted = true;
+  shopShown = false;
+
+  draw();
+}
 
 function start() {
   if (gameStarted) return;
@@ -419,7 +427,11 @@ document.body.addEventListener("keyup", (e) => {
     }
   } else {
     if (e.key === ' ') {
-      start()
+      if (shopShown) {
+        continueGame();
+      } else {
+        start();
+      }
     }
   }
 });
