@@ -4,7 +4,7 @@ const ctx = canvas.getContext('2d');
 const canvasWidth = 800;
 const canvasHeight = 600;
 const scoreHeight = 40;
-const healthHight = 80;
+const helthHeight = 80;
 
 const keys = [];
 
@@ -84,7 +84,7 @@ function objectsIntersect(a, b) {
 }
 
 function getRandomY(objectHeight) {
-  return scoreHeight + objectHeight + Math.random() * (canvasHeight - objectHeight - scoreHeight - healthHight);
+  return scoreHeight + objectHeight + Math.random() * (canvasHeight - objectHeight - scoreHeight - helthHeight);
 }
 
 // INIT FUNCTIONS
